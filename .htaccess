@@ -8,10 +8,13 @@ AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css a
     ExpiresActive On
     ExpiresDefault "access plus 1 year"
 </FilesMatch>
+<FilesMatch "\.(ico|pdf|flv|jpe?g|png|gif|js|css|swf)$">
+    Header set Expires "Sat, 27 Dec 2014 23:59:59 GMT"
+</FilesMatch>
 #End Expires headers
 #Cache-Control Headers
 # 480 weeks
-<filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+<filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|woff|html)$">
 Header set Cache-Control "max-age=290304000, public"
 </filesMatch>
 #End Cache-Control Headers
