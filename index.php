@@ -12,7 +12,7 @@
 	<meta name="author" content="Steven Harley">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="<?php echo '//static.'.$_SERVER['SERVER_NAME'].$D; ?>/styles/css/base.css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo '//static.'.$_SERVER['SERVER_NAME'].$D; ?>/scripts/js/smharley.js">

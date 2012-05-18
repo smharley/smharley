@@ -14,10 +14,9 @@ AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css a
 #End Expires headers
 #Cache-Control Headers
 # 480 weeks
-<filesMatch "\.(ico|pdf|jpe?g|png|gif|js|css|woff|html|php)$">
+<FilesMatch "\.(ico|pdf|jpe?g|png|gif|js|css|woff|html|php)$">
 	Header set Cache-Control "max-age=290304000, public"
-</filesMatch>
+</FilesMatch>
 #End Cache-Control Headers
-
 AddType application/x-font-woff .woff
 ErrorDocument 404 /404.html
