@@ -10,8 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="stylesheet" href="http://static.smharley.com/css/base.css">
-	<script type="text/javascript" src="http://static.smharley.com/js/smharley.js"></script>
+	<link rel="stylesheet" href="/static/styles/css/base.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/scripts/js/smharley.js"></script>
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<style type="text/css">
 	</style>
@@ -22,7 +23,7 @@
 	</header>
 	<div class="wrap">
 		<figure>
-			<img src="http://static.smharley.com/img/steven-playing-jenga.png" alt="Steven playing jenga" />
+			<img src="/static/img/steven-playing-jenga.png" alt="Steven playing jenga" />
 		</figure>
 		<hgroup>
 			<h2>hi, i’m a front-end developer.</h2>
