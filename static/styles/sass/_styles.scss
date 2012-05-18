@@ -1,3 +1,12 @@
+@function em($target-px, $context) {
+  @return #{($target-px / $context) * 1em};
+}
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+@function px-p($target, $container) {
+  @return calc-percent($target, $container);
+}
 
 @mixin clearfix {
   &:before {
@@ -24,8 +33,8 @@
 body {
   min-width: 320px;
   margin: 0;
-  padding: 0 0 48px;
-  background: #f0f0f0 url(/images/body-bg.jpg) repeat-x 0 191px; }
+  padding: 0 0 em(48, 16);
+  background: #f0f0f0 url(/images/body-bg.jpg) repeat-x 0 em(191, 16); }
 
 a:active { top: 1px; }
 
@@ -37,17 +46,17 @@ header {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    line-height: 117px;
+    line-height: 1em;
     margin: 0;
-    padding: 37px 0;
+    padding: em(37, 16) 0;
     background: url(/images/steven-harley-web-developer.png) no-repeat center center; } }
 
 .wrap { 
   @include clearfix; 
   width: 96%; 
-  max-width: 1028px; 
+  max-width: em(1028, 16); 
   margin: 0 auto; 
-  margin-top: 48px;
+  margin-top: em(48, 16);
   @media all and (min-width: 1028px) {
     width: 100%; } }
     
@@ -59,7 +68,7 @@ figure {
   
 hgroup {
   width: 100%;
-  margin-top: 36px;
+  margin-top: em(36, 16);
   @media all and (min-width: 557px) {
     float: left;
     width: auto;
@@ -70,30 +79,30 @@ hgroup {
     background: url(/images/borders.png) repeat-x 0 0;
     position: relative;
     margin: 0;
-    padding: 36px 0 0;
+    padding: em(36, 44) 0 0;
     color: #222;
     text-shadow: 1px 1px 0 #fff;
     letter-spacing: -3px;
-    font: normal 34px / 36px "MuseoSlab100", "Helvetica Neue", Arial, Helvetica, sans-serif; 
+    font: normal em(34, 16) / em(36, 34) "MuseoSlab100", "Helvetica Neue", Arial, Helvetica, sans-serif; 
     @media all and (min-width: 800px) {
-      font-size: 44px;
-      line-height: 52px; } }
+      font-size: em(44, 16);
+      line-height: em(52, 44); } }
   h3 {
     background: url(/images/borders.png) repeat-x 0 100%;
     position: relative;
-    padding: 24px 5% 36px 0;
+    padding: em(24, 32) 5% em(36, 32) 0;
     margin: 0;
     color: #222;
     text-shadow: 1px 1px 0 #fff;
     letter-spacing: -1px;
-    font: normal 28px / 32px "MuseoSlab100", "Helvetica Neue", Arial, Helvetica, sans-serif; 
+    font: normal em(28, 16) / em(32, 28) "MuseoSlab100", "Helvetica Neue", Arial, Helvetica, sans-serif; 
     @media all and (min-width: 800px) {
-      font-size: 32px;
-      line-height: 44px; } } }
+      font-size: em(32, 16);
+      line-height: em(44, 32); } } }
 
 figure {
   margin: 0 auto;
-  width: 266px;
+  width: em(266, 16);
   @media all and (min-width: 557px) {
     float: right;
     margin: 0;
@@ -104,16 +113,16 @@ figure {
 
 .content {
   background-color: #fff;
-  padding-bottom: 32px;
+  padding-bottom: em(32, 16);
   margin: 0 auto;
   @include box-shadow(#DADADA 0 0 15px);
   @media all and (min-width: 1028px) {
     @include background-clip(padding-box);
     @include border-radius(6px); }
   h2 {
-    padding: 33px 0 24px 40px;
+    padding: em(33, 44) 0 em(24, 44) em(40, 44);
     margin: 0;
-    font: normal 44px / 48px "MuseoSlab100", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font: normal em(44, 16) / em(48, 44) "MuseoSlab100", "Helvetica Neue", Arial, Helvetica, sans-serif;
     letter-spacing: -2px;
     color: #222; }
   ul {
@@ -122,11 +131,11 @@ figure {
     margin: 0; }
   li {
     text-decoration: none;
-    font: normal 18px / 24px "MuseoSlab300", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font: normal em(18, 16) / em(24, 18) "MuseoSlab300", "Helvetica Neue", Arial, Helvetica, sans-serif;
     color: #222;
     a {
       text-decoration: none;
-      font: normal 18px / 24px "MuseoSlab300", "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font: normal em(18, 16) / em(24, 18) "MuseoSlab300", "Helvetica Neue", Arial, Helvetica, sans-serif;
       color: #222; } } }
 
 .contact a:hover {
@@ -138,26 +147,26 @@ figure {
   @include clearfix;
   list-style: none;
   li {
-    margin-bottom: 24px;
+    margin-bottom: em(24, 16);
     border: 1px solid #f0f0f0;
     position: relative;
     background: white;
     @include border-radius(3px);
     @include box-shadow(rgba(0, 0, 0, 0.07) 0 1px 2px);
     background: url(/images/dbbb-bg.png) no-repeat 0 0;
-    padding: 10px;
-    margin-right: 20px;
-    max-width: 220px;
+    padding: em(10, 16);
+    margin-right: em(20, 16);
+    max-width: em(220, 16);
     float: left;
     em {
       display: block;
       margin: 0 0 3px;
-      font: bold 11px / 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font: bold em(11, 16) / em(16, 11) "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #888; }
     strong {
       display: block;
       margin: 0 0 4px;
-      font: bold 14px / 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font: bold em(11, 16) / em(16, 11) "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #444; } }
   .over {
     background: white;
@@ -165,13 +174,13 @@ figure {
     opacity: 0;
     filter: alpha(opacity = 0);
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 180px;
-    height: 130px;
+    top: em(10, 14);
+    left: em(10, 14);
+    width: em(180, 14);
+    height: em(130, 14);
     margin: 0;
-    padding: 10px;
-    font-size: 12px;
+    padding: em(10, 14);
+    font-size: em(14, 16);
     line-height: 2;
     text-decoration: none;
     color: #888;
