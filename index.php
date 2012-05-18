@@ -1,7 +1,10 @@
 <!doctype html>
-<html lang="en">
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]>   <html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]>   <html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
 	<title>Steven Harley</title>
@@ -10,10 +13,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="stylesheet" href="/static/styles/css/base.css">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="/static/scripts/js/smharley.js"></script>
-	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" href="<?php echo 'http://static.'.$_SERVER['SERVER_NAME'].$D; ?>/styles/css/base.css">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo 'http://static.'.$_SERVER['SERVER_NAME'].$D; ?>/scripts/js/smharley.js">
+	</script>
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<style type="text/css">
 	</style>
 </head>
@@ -23,7 +27,7 @@
 	</header>
 	<div class="wrap">
 		<figure>
-			<img src="/static/img/steven-playing-jenga.png" alt="Steven playing jenga" />
+			<img src="<?php echo 'http://static.'.$_SERVER['SERVER_NAME'].$D; ?>/images/steven-playing-jenga.png" alt="Steven playing jenga" />
 		</figure>
 		<hgroup>
 			<h2>hi, i’m a front-end developer.</h2>
@@ -80,17 +84,17 @@
 				<h2>my contact info:</h2>
 				<ul class="contact">
 					<li>twitter&nbsp;&ndash;&nbsp;
-						<a href="http://twitter.com/smharley/" class="twitter" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">
+						<a href="//twitter.com/smharley/" class="twitter" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">
 							@smharley
 						</a>
 					</li>
 					<li>dribbble&nbsp;&ndash;&nbsp;
-						<a href="http://dribbble.com/smharley" class="dribbble" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Dribbble']);">
+						<a href="//dribbble.com/smharley" class="dribbble" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Dribbble']);">
 							@smharley
 						</a>
 					</li>
 					<li>linkedin&nbsp;&ndash;&nbsp;
-						<a href="http://www.linkedin.com/in/smharley" class="linkedin" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">
+						<a href="//linkedin.com/in/smharley" class="linkedin" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">
 							smharley
 						</a>				
 					</li>
