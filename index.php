@@ -34,67 +34,66 @@
 			<h3>I like coding HTML/CSS/JS/PHP & am an aspiring web designer.</h3> 
 		</hgroup>
 	</div>
-	<div class="wrap">
-		<div class="content">
-			<div class="dribbble">
-				<h2>Stuff I&rsquo;m working on:</h2>
-				<ol class="dbbb">
-					<?php
-					 
-						require 'dribbble.php';
-						$dribbble = new Dribbble();
-						$perpage='8';
-												
-						try {
-						    $my_shots = $dribbble->get_player_shots('smharley', 1, $perpage);
-						    foreach ($my_shots->shots as $shot) {
-						    
-						    	$date = $shot->created_at;
-						    	$datepieces = explode(" ", $date);
-						    	
-						    	date_default_timezone_set('America/Halifax');
-								echo	
-							'<li>
-						<a href="' . $shot->url . '" onclick="_gaq.push([\'_trackEvent\', \'Links\', \'Social\', \'Dribbble\']);"><img src="' . $shot->image_teaser_url . '" alt="' . $shot->title . '" /></a>
-						<a href="' . $shot->url . '" class="over " onclick="_gaq.push([\'_trackEvent\', \'Links\', \'Social\', \'Dribbble\']);">	
-							<strong>' . $shot->title . '</strong>'
+	<div class="wrap content">
+		<div class="dribbble">
+			<h2>Stuff I&rsquo;m working on:</h2>
+			<ol class="dbbb">
+				<?php
+				 
+					require 'dribbble.php';
+					$dribbble = new Dribbble();
+					$perpage='8';
+											
+					try {
+					    $my_shots = $dribbble->get_player_shots('smharley', 1, $perpage);
+					    foreach ($my_shots->shots as $shot) {
+					    
+					    	$date = $shot->created_at;
+					    	$datepieces = explode(" ", $date);
+					    	
+					    	date_default_timezone_set('America/Halifax');
+							echo	
+						'<li>
+					<a href="' . $shot->url . '" onclick="_gaq.push([\'_trackEvent\', \'Links\', \'Social\', \'Dribbble\']);"><img src="' . $shot->image_url . '" alt="' . $shot->title . '" /></a>
+					<a href="' . $shot->url . '" class="over " onclick="_gaq.push([\'_trackEvent\', \'Links\', \'Social\', \'Dribbble\']);">	
+						<strong>' . $shot->title . '</strong>'
 /* 							<em>' . time_ago($datepieces[0],$datepieces[1]) . '</em> */
-						. '</a>
-					</li>
-					';
-						    }
-						}
-						catch (DribbbleException $e) {
-						    echo 'Error: ' . $e->getMessage();
-						}
-					?>
-				
-				</ol>
-				<h2>My contact info:</h2>
-				<ul class="contact">
-					<li>Twitter&nbsp;&ndash;&nbsp;
-						<a href="//twitter.com/smharley/" class="twitter" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">
-							@smharley
-						</a>
-					</li>
-					<li>Dribbble&nbsp;&ndash;&nbsp;
-						<a href="//dribbble.com/smharley" class="dribbble" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Dribbble']);">
-							@smharley
-						</a>
-					</li>
-					<li>LinkedIn&nbsp;&ndash;&nbsp;
-						<a href="//linkedin.com/in/smharley" class="linkedin" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">
-							smharley
-						</a>				
-					</li>
-					<li>Email&nbsp;&ndash;&nbsp;
-						<a href="mailto:me@smharley.com" class="email" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Email']);">
-							me@smharley.com
-						</a>
-					</li>
-				</ul>
-			</div>
+					. '</a>
+				</li>
+				';
+					    }
+					}
+					catch (DribbbleException $e) {
+					    echo 'Error: ' . $e->getMessage();
+					}
+				?>
+			
+			</ol>
+			<a href="//dribbble.com/smharley" class="all">View all →</a>
 		</div>
+		<h2>My contact info:</h2>
+		<ul class="contact">
+			<li>
+				<a href="//twitter.com/smharley/" class="twitter" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">
+					Twitter
+				</a>
+			</li>
+			<li>
+				<a href="//dribbble.com/smharley" class="dribbble" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Dribbble']);">
+					Dribbble
+				</a>
+			</li>
+			<li>
+				<a href="//linkedin.com/in/smharley" class="linkedin" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">
+					LinkedIn
+				</a>				
+			</li>
+			<li>
+				<a href="mailto:me@smharley.com" class="email" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Email']);">
+					Email
+				</a>
+			</li>
+		</ul>
 	</div>
 	<script type="text/javascript">
 	
