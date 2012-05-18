@@ -1,3 +1,4 @@
+
 @mixin clearfix {
   &:before {
     content: "";
@@ -18,7 +19,7 @@
     clear: both; }
   *zoom: 1; }
   
-* { text-transform: lowercase; }  
+* { text-transform: lowercase; @include box-sizing(border-box); }  
 
 body {
   min-width: 320px;
@@ -51,18 +52,10 @@ header {
     width: 100%; } }
     
 .wrap, hgroup, .content {
-  -webkit-transition: width 0.2s ease-out;
-  -moz-transition: width 0.2s ease-out;
-  -ms-transition: width 0.2s ease-out;
-  -o-transition: width 0.2s ease-out;
-  transition: width 0.2s ease-out; }
+   @include transition(width 0.2s ease-out); }
 
 figure {
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear; }
+  @include transition(all 0.5s linear); }
   
 hgroup {
   width: 100%;
@@ -105,11 +98,7 @@ figure {
     float: right;
     margin: 0;
     width: auto;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
-    transition: all 0.5s none; }
+    @include transition(all 0.5s none); }
   img {
     margin: -13px -10px 0 0; } }
 
@@ -117,16 +106,10 @@ figure {
   background-color: #fff;
   padding-bottom: 32px;
   margin: 0 auto;
-  -webkit-box-shadow: 0 0 15px #DADADA;
-  -moz-box-shadow: 0 0 15px #DADADA;
-  box-shadow: 0 0 15px #DADADA;
+  @include box-shadow(#DADADA 0 0 15px);
   @media all and (min-width: 1028px) {
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px; }
+    @include background-clip(padding-box);
+    @include border-radius(6px); }
   h2 {
     padding: 33px 0 24px 40px;
     margin: 0;
@@ -159,12 +142,8 @@ figure {
     border: 1px solid #f0f0f0;
     position: relative;
     background: white;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+    @include border-radius(3px);
+    @include box-shadow(rgba(0, 0, 0, 0.07) 0 1px 2px);
     background: url(/images/dbbb-bg.png) no-repeat 0 0;
     padding: 10px;
     margin-right: 20px;
@@ -198,11 +177,7 @@ figure {
     color: #888;
     overflow: hidden;
     display: block;
-    -webkit-transition: opacity 0.5s ease;
-    -moz-transition: opacity 0.5s ease;
-    -ms-transition: opacity 0.5s ease;
-    -o-transition: opacity 0.5s ease;
-    transition: opacity 0.5s ease;
+    @include transition(opacity 0.5s ease);
     &:hover {
       opacity: 1;
       filter: alpha(opacity = 100); } } } 
