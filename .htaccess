@@ -3,3 +3,9 @@
 AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
 </ifmodule>
 #End Gzip
+#Expires headers - http://cjohansen.no/en/apache/using_a_far_future_expires_header
+<FilesMatch "\.(ico|pdf|flv|jpe?g|png|gif|js|css|swf)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+</FilesMatch>
+#End Expires headers
