@@ -18,6 +18,8 @@
     clear: both; }
   *zoom: 1; }
   
+* { text-transform: lowercase; }  
+
 body {
   min-width: 320px;
   margin: 0;
@@ -95,7 +97,6 @@ hgroup {
     @media all and (min-width: 800px) {
       font-size: 32px;
       line-height: 44px; } } }
-
 
 figure {
   margin: 0 auto;
@@ -205,3 +206,4 @@ figure {
     &:hover {
       opacity: 1;
       filter: alpha(opacity = 100); } } } 
+      

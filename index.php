@@ -13,9 +13,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="stylesheet" href="<?php echo 'http://static.'.$_SERVER['SERVER_NAME'].$D; ?>/styles/css/base.css">
+	<link rel="stylesheet" href="<?php echo '//static.'.$_SERVER['SERVER_NAME'].$D; ?>/styles/css/base.css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo 'http://static.'.$_SERVER['SERVER_NAME'].$D; ?>/scripts/js/smharley.js">
+	<script type="text/javascript" src="<?php echo '//static.'.$_SERVER['SERVER_NAME'].$D; ?>/scripts/js/smharley.js">
 	</script>
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<style type="text/css">
@@ -27,78 +27,67 @@
 	</header>
 	<div class="wrap">
 		<figure>
-			<img src="<?php echo 'http://static.'.$_SERVER['SERVER_NAME'].$D; ?>/images/steven-playing-jenga.png" alt="Steven playing jenga" />
+			<img src="<?php echo '//static.'.$_SERVER['SERVER_NAME'].$D; ?>/images/steven-playing-jenga.png" alt="Steven playing jenga" />
 		</figure>
 		<hgroup>
-			<h2>hi, i’m a front-end developer.</h2>
-			<h3>i like coding html/css/js/php & am an aspiring web designer.</h3> 
+			<h2>Hi, I’m a front-end developer.</h2>
+			<h3>I like coding HTML/CSS/JS/PHP & am an aspiring web designer.</h3> 
 		</hgroup>
 	</div>
 	<div class="wrap">
 		<div class="content">
 			<div class="dribbble">
-				<h2>stuff i&rsquo;m working on:</h2>
+				<h2>Stuff I&rsquo;m working on:</h2>
 				<ol class="dbbb">
-				<?php
-				 
-					require 'dribbble.php';
-					$dribbble = new Dribbble();
-					$perpage='8';
-					
-					function time_ago($date,$time) {
-						$days = abs(ceil((strtotime($date)-strtotime("now"))/86400));
-							if ($days > 0)  $timepast = $days." days";
-							if ($days == 1)  $timepast = $days." day";
-						$hours = abs(ceil((strtotime($time)-strtotime("now"))/3600));
-							if ($days == 0) $timepast = "about ".$hours." hours";
-							if ($hours == 1) $timepast = "about ".$hours." hour";
-						$minutes = abs(ceil((strtotime($time)-strtotime("now"))/60))-($hours*60);
-							if ($hours == 0) $timepast = $minutes." minutes";
-							if ($minutes == 1) $timepast = $minutes." minute";
-						return $timepast;
-					}
-					
-					try {
-					    $my_shots = $dribbble->get_player_shots('smharley', 1, $perpage);
-					    foreach ($my_shots->shots as $shot) {
-					    
-					    	$date = $shot->created_at;
-					    	$datepieces = explode(" ", $date);
-					    	
-					    	date_default_timezone_set('America/Halifax');
-					    	
-					        echo '<li>
-					        	  		<a href="' . $shot->url . '" onclick="_gaq.push([\'_trackEvent\', \'Links\', \'Social\', \'Dribbble\']);"><img src="' . $shot->image_teaser_url . '" alt="' . $shot->title . '" /></a>
-					        	  		<a href="' . $shot->url . '" class="over " onclick="_gaq.push([\'_trackEvent\', \'Links\', \'Social\', \'Dribbble\']);">	
-											<strong>' . $shot->title . '</strong>
-											<em>' . time_ago($datepieces[0],$datepieces[1]) . '</em>
-										</a>
-					        	  </li>';
-					    }
-					}
-					catch (DribbbleException $e) {
-					    echo 'Error: ' . $e->getMessage();
-					}
-				?>
+					<?php
+					 
+						require 'dribbble.php';
+						$dribbble = new Dribbble();
+						$perpage='8';
+												
+						try {
+						    $my_shots = $dribbble->get_player_shots('smharley', 1, $perpage);
+						    foreach ($my_shots->shots as $shot) {
+						    
+						    	$date = $shot->created_at;
+						    	$datepieces = explode(" ", $date);
+						    	
+						    	date_default_timezone_set('America/Halifax');
+								echo	
+							'<li>
+						<a href="' . $shot->url . '" onclick="_gaq.push([\'_trackEvent\', \'Links\', \'Social\', \'Dribbble\']);"><img src="' . $shot->image_teaser_url . '" alt="' . $shot->title . '" /></a>
+						<a href="' . $shot->url . '" class="over " onclick="_gaq.push([\'_trackEvent\', \'Links\', \'Social\', \'Dribbble\']);">	
+							<strong>' . $shot->title . '</strong>'
+/* 							<em>' . time_ago($datepieces[0],$datepieces[1]) . '</em> */
+						. '</a>
+					</li>
+					';
+						    }
+						}
+						catch (DribbbleException $e) {
+						    echo 'Error: ' . $e->getMessage();
+						}
+					?>
+				
 				</ol>
-				<h2>my contact info:</h2>
+				<h2>My contact info:</h2>
 				<ul class="contact">
-					<li>twitter&nbsp;&ndash;&nbsp;
+					<li>Twitter&nbsp;&ndash;&nbsp;
 						<a href="//twitter.com/smharley/" class="twitter" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">
 							@smharley
 						</a>
 					</li>
-					<li>dribbble&nbsp;&ndash;&nbsp;
+					<li>Dribbble&nbsp;&ndash;&nbsp;
 						<a href="//dribbble.com/smharley" class="dribbble" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Dribbble']);">
 							@smharley
 						</a>
 					</li>
-					<li>linkedin&nbsp;&ndash;&nbsp;
+					<li>LinkedIn&nbsp;&ndash;&nbsp;
 						<a href="//linkedin.com/in/smharley" class="linkedin" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">
 							smharley
 						</a>				
 					</li>
-					<li>email&nbsp;&ndash;&nbsp;
+					<li>Email&nbsp;&ndash;&nbsp;
 						<a href="mailto:me@smharley.com" class="email" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Email']);">
 							me@smharley.com
 						</a>

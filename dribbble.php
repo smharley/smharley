@@ -207,3 +207,16 @@ class Dribbble
         return json_decode($result);
     }
 }
+
+function time_ago($date,$time) {
+	$days = abs(ceil((strtotime($date)-strtotime("now"))/86400));
+		if ($days > 0)  $timepast = $days." days";
+		if ($days == 1)  $timepast = $days." day";
+	$hours = abs(ceil((strtotime($time)-strtotime("now"))/3600));
+		if ($days == 0) $timepast = "about ".$hours." hours";
+		if ($hours == 1) $timepast = "about ".$hours." hour";
+	$minutes = abs(ceil((strtotime($time)-strtotime("now"))/60))-($hours*60);
+		if ($hours == 0) $timepast = $minutes." minutes";
+		if ($minutes == 1) $timepast = $minutes." minute";
+	return $timepast;
+}

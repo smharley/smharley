@@ -6,10 +6,11 @@
   Designer/Developer: Steven Harley
   Site: smharley.com
   Twitter: @smharley
+  Dribbble: dribbble.com/smharley
   Location: San Francisco, CA
 
 
 /* SITE */
   Standards: HTML5, CSS3
-  Components: Javascript, html5shiv, subtlepatterns
+  Components: SASS, CoffeeScript, html5shiv, subtlepatterns
   Software: Photoshop, Coda
