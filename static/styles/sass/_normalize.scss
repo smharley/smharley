@@ -45,14 +45,19 @@
 @import "embed/img";
 @import "embed/svg";
 
+@font-face {
+  font-family: 'MuseoSlab100';
+  src: url('/static/fonts/museo/museo_slab_100-webfont.eot');
+  src: local("☺"), url('/fonts/museo/museo_slab_100-webfont.ttf') format("truetype"); }
+
 
 /* Figures */
 
 @import "figures/figure";
 
-
-/* Forms */
-
+//
+///* Forms */
+//
 //@import "forms/form";
 //@import "forms/fieldset";
 //@import "forms/legend";
@@ -64,8 +69,9 @@
 //@import "forms/search";
 //@import "forms/fix-focus-inner";
 //@import "forms/textarea";
-
-
-/* Tables */
-
+//
+//
+///* Tables */
+//
 //@import "tables/fix-cell-spacing";
+//

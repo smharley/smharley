@@ -1,5 +1,3 @@
-@font-face { font-family: "MuseoSlab100"; src: url(http://dev.smharley.com/static/fonts/museo/museo_slab_100-webfont.woff); src: url(http://dev.smharley.com/static/fonts/museo/museo_slab_100-webfont.woff?#iefix) format('eot'), "http://dev.smharley.com/static/fonts/museo/museo_slab_100-webfont.eot"; font-weight: "http://dev.smharley.com/static/fonts/museo/museo_slab_100-webfont.ttf"; }
-
 /* HTML5 display definitions */
 /* Corrects block display not defined in IE6/7/8/9 & FF3 */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
@@ -103,47 +101,52 @@ img { border: 0; /* 1 */ -ms-interpolation-mode: bicubic; /* 2 */ }
 /* Corrects overflow displayed oddly in IE9 */
 svg:not(:root) { overflow: hidden; }
 
+@font-face { font-family: 'MuseoSlab100'; src: url("/static/fonts/museo/museo_slab_100-webfont.eot"); src: local("☺"), url("/fonts/museo/museo_slab_100-webfont.ttf") format("truetype"); }
+
 /* Figures */
 /* Addresses margin not present in IE6/7/8/9, S5, O11 */
 figure { margin: 0; }
 
-/* Forms */
-/* Tables */
 .cf { *zoom: 1; }
 .cf:before { content: ""; display: table; }
 .cf:after { content: ""; display: table; clear: both; }
 
 * { text-transform: lowercase; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-body { min-width: 320px; margin: 0; padding: 0 0 3em; background: #85c146; }
+body { min-width: 320px; margin: 0; padding: 0 0 3em; background: #88C75E; border-bottom: 4px solid #6b9f35; }
 
 a:active { top: 1px; }
 
-header { text-align: center; background: #fcfcfc url(/images/header-bg.jpg) repeat 0 0; border-bottom: 1px solid #6c9f35; }
-header h1 { text-indent: 100%; white-space: nowrap; overflow: hidden; line-height: 1em; margin: 0; padding: 2.313em 0; background: url(/images/steven-harley-web-developer.png) no-repeat center center; }
+.no-font-face * { font-weight: 100; }
 
-.wrap { *zoom: 1; width: 96%; position: relative; max-width: 64.25em; margin: 0 auto; margin-top: 3em; }
+header { background: #fcfcfc url(/images/header-bg.jpg) repeat 0 0; border-bottom: 1px solid #6c9f35; }
+header .wrap { padding: 0; margin: 0 auto; }
+header img { width: 90%; max-width: 17.813em; margin: -11px 0; padding: 0 0 1em 0; }
+
+.wrap { *zoom: 1; width: 96%; position: relative; max-width: 64.25em; margin: 0 auto; margin-top: 2.938em; }
 .wrap:before { content: ""; display: table; }
 .wrap:after { content: ""; display: table; clear: both; }
 @media all and (min-width: 1028px) { .wrap { width: 100%; } }
 
 hgroup { width: 100%; margin-top: 2.25em; }
-@media all and (min-width: 600px) { hgroup { width: auto; float: left; margin-top: 0; margin-right: 270px; } }
-hgroup h2 { border-top: 1px solid #527829; position: relative; margin: 0; padding: 0.818em 0 0; color: #fff; letter-spacing: -3px; font: normal 2.375em/1.158em "MuseoSlab100", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+@media all and (min-width: 600px) { hgroup { width: auto; float: left; margin-top: 0; margin-right: 262px; } }
+hgroup h2 { border-top: 4px solid #385b20; position: relative; margin: 0; padding: 0.5em 0 0.105em; color: #fff; letter-spacing: -3px; font: normal 2.375em/1.158em "MuseoSlab100", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 @media all and (min-width: 800px) { hgroup h2 { font-size: 2.5em; line-height: 1.2em; } }
-@media all and (min-width: 830px) { hgroup h2 { font-size: 2.75em; line-height: 1.182em; } }
-hgroup h3 { border-bottom: 1px solid #527829; position: relative; padding: 0.75em 5% 1.125em 0; margin: 0; color: #111; letter-spacing: -1px; font: normal 1.75em/1.143em "MuseoSlab100", "Helvetica Neue", Arial, Helvetica, sans-serif; }
+@media all and (min-width: 830px) { hgroup h2 { font-size: 3.25em; line-height: 0.981em; } }
+hgroup h3 { position: relative; padding: 20px 5% 0 0; margin: 0; color: #19290e; letter-spacing: -1px; font: normal 1.375em/1.273em "MuseoSlab100", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 @media all and (min-width: 600px) { hgroup h3 { font-size: 1.875em; line-height: 1.4em; } }
-@media all and (min-width: 800px) { hgroup h3 { font-size: 2em; line-height: 1.375em; } }
+@media all and (min-width: 800px) { hgroup h3 { font-size: 2.25em; line-height: 1.333em; } }
+hgroup h4 { position: relative; padding: 0.25em 5% 1.125em 0; margin: 0; color: #19290e; letter-spacing: -1px; font: normal 1.375em/1.273em "MuseoSlab100", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+@media all and (min-width: 600px) { hgroup h4 { font-size: 1.5em; line-height: 1.5em; } }
+@media all and (min-width: 800px) { hgroup h4 { font-size: 1.75em; line-height: 1.429em; } }
 
-figure { margin: 0 auto; width: auto; text-align: center; }
-@media all and (min-width: 600px) { figure { position: absolute; top: 0; right: 0; margin: 0; -webkit-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -ms-transition: all 0.5s linear; -o-transition: all 0.5s linear; transition: all 0.5s linear; } }
+figure { margin: 0 auto; width: 100%; text-align: center; background: #fff; padding: 0.25em; line-height: 0; max-width: 310px; -webkit-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -ms-transition: all 0.5s linear; -o-transition: all 0.5s linear; transition: all 0.5s linear; }
+@media all and (min-width: 600px) { figure { width: 96%; position: absolute; top: 0; right: 1px; margin-left: 1.25em; max-width: 15.25em; } }
 figure img { max-width: 100%; margin: 0 auto; }
-@media all and (min-width: 600px) { figure img { margin: -8px -10px 0 0; } }
 
 .content { background-color: transparent; padding-bottom: 2em; margin: 0 auto; }
 @media all and (min-width: 1028px) { .content { -webkit-background-clip: padding; -moz-background-clip: padding; background-clip: padding-box; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; } }
-.content h2 { padding: 1.182em 0 0.545em; margin: 0; font: normal 2.75em/1.091em "MuseoSlab100", "Helvetica Neue", Arial, Helvetica, sans-serif; letter-spacing: -2px; color: #fff; }
+.content h2 { padding: 0.273em 0 0.545em; margin: 1.182em 0 0; border-top: 3px solid #9bd077; font: normal 2.75em/1.091em "MuseoSlab100", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; letter-spacing: -2px; color: #fff; }
 .content ul, .content ol { list-style: none; padding: 0 0 0.75em; color: #222; margin: 0; width: 100%; *zoom: 1; list-style: none; margin: 0; overflow: hidden; padding: 0; }
 .content ul:before, .content ol:before { content: ""; display: table; }
 .content ul:after, .content ol:after { content: ""; display: table; clear: both; }
@@ -170,12 +173,20 @@ figure img { max-width: 100%; margin: 0 auto; }
   .content ul li:nth-child(-n+4), .content ol li:nth-child(-n+4) { margin-top: 0; }
   .content ul li img, .content ul li a, .content ol li img, .content ol li a { float: left; }
   .content ul li a, .content ol li a { text-align: center; width: 100%; } }
-.content li { text-decoration: none; font: normal 1.125em/1.333em "MuseoSlab300", "Helvetica Neue", Arial, Helvetica, sans-serif; color: #222; }
-.content li a { text-decoration: none; font: normal 1.125em/1.333em "MuseoSlab300", "Helvetica Neue", Arial, Helvetica, sans-serif; color: #222; }
+.content li { text-decoration: none; font: normal 1.125em/1.333em "MuseoSlab100", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; color: #222; }
+.content li a { text-decoration: none; font: normal 1.125em/1.333em "MuseoSlab100", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; color: #222; }
 
-.dribbble .all { font: normal 1.125em/1.333em "MuseoSlab300", "Helvetica Neue", Arial, Helvetica, sans-serif; color: #111; padding: 1em 0 0.5em; text-decoration: none; display: block; }
+.dribbble { *zoom: 1; }
+.dribbble:before { content: ""; display: table; }
+.dribbble:after { content: ""; display: table; clear: both; }
 
-.dbbb li { margin-bottom: 1.25em; border: 1px solid #f0f0f0; position: relative; background: white; padding: 0.25em; margin-right: 1.25em; max-width: 13.75em; float: left; -webkit-transition-property: all; -moz-transition-property: all; -ms-transition-property: all; -o-transition-property: all; transition-property: all; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease; -moz-transition-timing-function: ease; -ms-transition-timing-function: ease; -o-transition-timing-function: ease; transition-timing-function: ease; }
+.dribbble .all { font: normal 1.125em/1em "MuseoSlab100", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; color: #15200b; margin: 3.334% 0 0 0; padding: 0.25em 0 0.5em; text-decoration: none; display: block; float: left; border-top: 1px solid #477529; width: 47.5%; }
+@media all and (min-width: 480px) { .dribbble .all { width: 31.667%; } }
+@media all and (min-width: 800px) { .dribbble .all { margin: 1.667% 0 0 0; width: 23.75%; } }
+.dribbble .all span { display: inline-block; padding-left: 0; -webkit-transition-property: all; -moz-transition-property: all; -ms-transition-property: all; -o-transition-property: all; transition-property: all; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease; -moz-transition-timing-function: ease; -ms-transition-timing-function: ease; -o-transition-timing-function: ease; transition-timing-function: ease; }
+.dribbble .all:hover span { padding-left: 6px; }
+
+.dbbb li { margin-bottom: 1.25em; position: relative; background: white; padding: 0.25em; margin-right: 1.25em; max-width: 13.75em; float: left; -webkit-transition-property: all; -moz-transition-property: all; -ms-transition-property: all; -o-transition-property: all; transition-property: all; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease; -moz-transition-timing-function: ease; -ms-transition-timing-function: ease; -o-transition-timing-function: ease; transition-timing-function: ease; }
 .dbbb li em { display: block; margin: 0 0 3px; font: bold 0.688em/1.455em "Helvetica Neue", Helvetica, Arial, sans-serif; color: #888; }
 .dbbb li strong { display: block; margin: 8px 0 4px 8px; font: bold 0.75em/1.333em "Helvetica Neue", Helvetica, Arial, sans-serif; color: #444; }
 .dbbb img { max-width: 100%; }

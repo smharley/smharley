@@ -7,6 +7,9 @@
 @function px-p($target, $container) {
   @return calc-percent($target, $container);
 }
+
+$fontStack: 'MuseoSlab100', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
 @mixin grid($items) {
 	list-style: none;
 	margin: 0;
@@ -79,22 +82,24 @@ body {
   min-width: 320px;
   margin: 0;
   padding: 0 0 em(48, 16);
-  background: #85c146; }
+  background: #88C75E;
+  border-bottom: 4px solid #6b9f35; }
 
 a:active { top: 1px; }
 
+.no-font-face * { font-weight: 100; }
+
 header {
-  text-align: center;
   background: #fcfcfc url(/images/header-bg.jpg) repeat 0 0;
   border-bottom: 1px solid #6c9f35;
-  h1 {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    line-height: 1em;
-    margin: 0;
-    padding: em(37, 16) 0;
-    background: url(/images/steven-harley-web-developer.png) no-repeat center center; } }
+  .wrap { 
+    padding: 0;
+    margin: 0 auto; }
+  img {
+    width: 90%;
+    max-width: em(285, 16);
+    margin: -11px 0;
+    padding: 0 0 em(16, 16) 0; } }
 
 .wrap { 
   @include cf; 
@@ -102,7 +107,7 @@ header {
   position: relative;
   max-width: em(1028, 16); 
   margin: 0 auto; 
-  margin-top: em(48, 16);
+  margin-top: em(47, 16);
   @media all and (min-width: 1028px) {
     width: 100%; } }
     
@@ -113,51 +118,67 @@ hgroup {
   	width: auto;
     float: left;
     margin-top: 0;
-    margin-right: 270px; }
+    margin-right: 262px; }
   h2 {
-    border-top: 1px solid #527829;
+    border-top: 4px solid #385b20;
     position: relative;
     margin: 0;
-    padding: em(36, 44) 0 0;
+    padding: em(19, 38) 0 em(4, 38);
   	color: #fff;
     letter-spacing: -3px;
-    font: normal em(38, 16) / em(44, 38) 'MuseoSlab100', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
+    font: normal em(38, 16) / em(44, 38) $fontStack; 
     @media all and (min-width: 800px) {
       font-size: em(40, 16);
       line-height: em(48, 40); }
     @media all and (min-width: 830px) {
-      font-size: em(44, 16);
-      line-height: em(52, 44); } }
+      font-size: em(52, 16);
+      line-height: em(51, 52); } }
   h3 {
-    border-bottom: 1px solid #527829;
     position: relative;
-    padding: em(24, 32) 5% em(36, 32) 0;
+    padding: 20px 5% 0 0;
     margin: 0;
-  	color: #111;
+  	color: #19290e;
     letter-spacing: -1px;
-    font: normal em(28, 16) / em(32, 28) 'MuseoSlab100', 'Helvetica Neue', Arial, Helvetica, sans-serif; 
+    font: normal em(22, 16) / em(28, 22) $fontStack; 
     @media all and (min-width: 600px) {
       font-size: em(30, 16);
       line-height: em(42, 30); }
     @media all and (min-width: 800px) {
-      font-size: em(32, 16);
-      line-height: em(44, 32); } } }
+      font-size: em(36, 16);
+      line-height: em(48, 36); } }
+  h4 {
+    position: relative;
+    padding: em(8, 32) 5% em(36, 32) 0;
+    margin: 0;
+  	color: #19290e;
+    letter-spacing: -1px;
+    font: normal em(22, 16) / em(28, 22) $fontStack; 
+    @media all and (min-width: 600px) {
+      font-size: em(24, 16);
+      line-height: em(36, 24); }
+    @media all and (min-width: 800px) {
+      font-size: em(28, 16);
+      line-height: em(40, 28); } } }
 
 figure {
   margin: 0 auto;
-  width: auto;
+  width: 100%;
   text-align: center;
+  background: #fff;
+  padding: em(4, 16);
+  line-height: 0;
+  max-width: 310px;
+  @include transition(all 0.5s linear);
   @media all and (min-width: 600px) {
+    width: 96%;
 	position: absolute; 
 	top: 0; 
-	right: 0;
-    margin: 0;
-    @include transition(all 0.5s linear); }
+	right: 1px;
+    margin-left: em(20, 16);
+    max-width: em(244, 16); }
   img {
   	max-width: 100%;
-  	margin: 0 auto;
-    @media all and (min-width: 600px) {
-      margin: -8px -10px 0 0; } } }
+  	margin: 0 auto; } }
 
 .content {
   background-color: transparent;
@@ -167,9 +188,10 @@ figure {
     @include background-clip(padding-box);
     @include border-radius(6px); }
   h2 {
-    padding: em(52, 44) 0 em(24, 44);
-    margin: 0;
-    font: normal em(44, 16) / em(48, 44) 'MuseoSlab100', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: em(12, 44) 0 em(24, 44);
+    margin: em(52, 44) 0 0;
+    border-top: 3px solid #9bd077;
+    font: normal em(44, 16) / em(48, 44) $fontStack;
     letter-spacing: -2px;
     color: #fff; }
   ul, ol {
@@ -186,23 +208,45 @@ figure {
 	  @include grid(4); } }
   li {
     text-decoration: none;
-    font: normal em(18, 16) / em(24, 18) "MuseoSlab300", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font: normal em(18, 16) / em(24, 18) $fontStack;
     color: #222;
     a {
       text-decoration: none;
-      font: normal em(18, 16) / em(24, 18) "MuseoSlab300", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      font: normal em(18, 16) / em(24, 18) $fontStack;
       color: #222; } } }
 
+.dribbble {
+  @include cf; } 
+
 .dribbble .all { 
-    font: normal em(18, 16) / em(24, 18) "MuseoSlab300", 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    color: #111;
-   	padding: em(16, 16) 0 em(8, 16);
+    font: normal em(18, 16) / em(18, 18) $fontStack;
+    color: #15200b;
+   	margin: 3.334% 0 0 0;
+   	padding: em(4, 16) 0 em(8, 16);
    	text-decoration: none;
-   	display: block; } 
+   	display: block;
+   	float: left;
+	border-top: 1px solid #477529;
+	width: 47.5%;
+	@media all and (min-width: 480px) {
+	  width: 31.667%; }
+	@media all and (min-width: 800px) {
+     margin: 1.667% 0 0 0;
+	  width: 23.75%; }
+	span {
+	  display: inline-block;
+	  padding-left: 0;
+      @include transition-property(all);
+	  @include transition-duration(.5s);
+	  @include transition-timing-function(ease);
+	 }
+	 &:hover { 
+	  span {
+	    padding-left: 6px; } } } 
+   	
 .dbbb {
   li {
     margin-bottom: em(20, 16);
-    border: 1px solid #f0f0f0;
     position: relative;
     background: white;
     padding: em(4, 16);

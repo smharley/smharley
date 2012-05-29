@@ -23,15 +23,18 @@
 </head>
 <body>
 	<header>
-		<h1>Steven Harley: Web Developer</h1>
+		<div class="wrap">
+			<img src="<?php echo '//static.'.$_SERVER['SERVER_NAME'].$D; ?>/images/steven-harley-web-developer.png" alt="Steven Harley: Web Developer" />
+		</div>
 	</header>
 	<div class="wrap">
 		<figure>
 			<img src="<?php echo '//static.'.$_SERVER['SERVER_NAME'].$D; ?>/images/steven-playing-jenga.png" alt="Steven playing jenga" />
 		</figure>
 		<hgroup>
-			<h2>Hi, I’m a front-end developer.</h2>
-			<h3>I like coding HTML/CSS/JS/PHP & am an aspiring web designer.</h3> 
+			<h2>Hi, I&rsquo;m a front-end developer.</h2>
+			<h3>I like coding HTML/CSS/JS/PHP &amp; am an aspiring web&nbsp;designer.</h3>
+			<h4>Currently not accepting new clients. Thanks for visiting!</h4> 
 		</hgroup>
 	</div>
 	<div class="wrap content">
@@ -69,13 +72,13 @@
 				?>
 			
 			</ol>
-			<a href="//dribbble.com/smharley" class="all">View all →</a>
+			<a href="//dribbble.com/smharley" class="all">View all <span>→</span></a>
 		</div>
 		<h2>My contact info:</h2>
 		<ul class="contact">
 			<li>
-				<a href="//twitter.com/smharley/" class="twitter" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">
-					Twitter
+				<a href="mailto:me@smharley.com" class="email" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Email']);">
+					Email
 				</a>
 			</li>
 			<li>
@@ -84,14 +87,14 @@
 				</a>
 			</li>
 			<li>
+				<a href="//twitter.com/smharley/" class="twitter" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">
+					Twitter
+				</a>
+			</li>
+			<li>
 				<a href="//linkedin.com/in/smharley" class="linkedin" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">
 					LinkedIn
 				</a>				
-			</li>
-			<li>
-				<a href="mailto:me@smharley.com" class="email" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Email']);">
-					Email
-				</a>
 			</li>
 		</ul>
 	</div>
