@@ -292,12 +292,10 @@ figure {
       opacity: 1;
       filter: alpha(opacity = 100); } } } 
       
-.contact li {
-  padding: em(4, 16);
-  background: #fff;
-    a { 
-      text-align: center;
- 	  background-color: #E0E0E0;
-	  padding: em(24, 18) 0;
-      color: #595959; 
-      display: block; } }
+ul.contact li {
+  padding: em(4, 16) 0;
+  a { 
+    text-align: left;
+	padding: em(24, 18) 0;
+    color: #222; 
+    display: block; } }
