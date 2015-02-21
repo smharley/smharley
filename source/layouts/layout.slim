@@ -13,6 +13,10 @@ html
     == stylesheet_link_tag "application"
     == javascript_include_tag  "application"
 
-  body class="#{page_classes}" ng-app="smharley"
+    script src="//use.typekit.net/eba8ptu.js"
+    javascript:
+      try{Typekit.load();}catch(e){}
 
-  == yield
+  body class="#{page_classes}" ng-app="smharley"
+    = partial "header"
+    == yield

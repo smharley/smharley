@@ -1,0 +1,149 @@
+%small-caps {
+  color: lighten($medium-gray, 20);
+  font-size: em(14);
+  font-weight: 400;
+  letter-spacing: em(1);
+  margin-top: em(6);
+  text-transform: uppercase;
+}
+
+.section {
+  padding: 2em 0 0;
+
+  &:last-child {
+    .section-content {
+      border: 0;
+    }
+  }
+
+  &-article {
+    margin-top: em(46);
+  }
+
+  &-content {
+    @include outer-container;
+    border-bottom: $base-border;
+    margin: em(20);
+    padding: em(32) 0 em(64);
+  }
+
+  &-description {
+    color: $medium-gray;
+    font: 400 em(16) $serif;
+  }
+
+  &-heading {
+    font-size: em(21);
+    line-height: em(25, 21);
+    margin-bottom: em(11, 21);
+    margin-top: em(24, 21);
+  }
+
+  &-list {
+    &-date {
+      @extend %small-caps;
+    }
+  }
+
+  &-paragraph {
+    font-family: $serif;
+    font-size: em(18);
+  }
+
+  &-thumb {
+    display: block;
+    float: left;
+    margin: 0 2em 4em 0;
+
+    &-heading {
+      font-size: em(21);
+      line-height: 1.1;
+    }
+
+    &-icon {
+      display: block;
+      float: left;
+      margin-right: 1em;
+    }
+
+    &-image {
+      display: block;
+    }
+
+    &-meta {
+      margin: 1.5em 0;
+    }
+
+    &-tags {
+      @extend %small-caps;
+    }
+  }
+
+  &-title {
+    color: $medium-gray;
+    font: 400 em(16) $serif;
+
+    &::after {
+      border-bottom: 1px solid $light-gray;
+      content: '';
+      display: block;
+      margin-top: em(15);
+      width: em(28);
+    }
+  }
+}
+
+@include media($large-screen) {
+  .section {
+    padding: {
+      left: em(20);
+      right: em(20);
+    }
+
+    &-aside {
+      @include span-columns(3);
+    }
+
+    &-article {
+      @include span-columns(9);
+      margin-top: em(71);
+    }
+
+    &-content {
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+
+    &-heading {
+      .section-list & {
+        margin-top: em(-4, 21);
+      }
+    }
+
+    &-list {
+      &-item {
+        @include span-columns(4);
+      }
+    }
+
+    &-paragraph {
+      font-size: em(20);
+      max-width: 90%;
+    }
+
+    &-thumb {
+      @include span-columns(4);
+      margin-bottom: 1em;
+
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+
+      &-meta {
+        display: none;
+      }
+    }
+  }
+}

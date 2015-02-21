@@ -16,7 +16,7 @@ require "slim"
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
+page 'home.html', :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout

@@ -1,0 +1,28 @@
+.header {
+  padding: em(28) em(20);
+
+  &-nav {
+    &-list {
+      @include row;
+    }
+
+    &-item {
+      display: block;
+      float: left;
+      width: em(80);
+    }
+  }
+}
+
+@include media($large-screen) {
+  .header {
+    &-nav {
+      @include outer-container;
+
+      &-list {
+        float: right;
+        text-align: right;
+      }
+    }
+  }
+}
