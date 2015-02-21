@@ -1,0 +1,6 @@
+li.section-list-item ng-repeat="post in posts | limitTo: 3"
+  a href="{{ post.link }}"
+    h3.section-heading
+      | {{ post.title }}
+    h4.section-list-date
+      | {{ post.date }}
