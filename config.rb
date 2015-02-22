@@ -19,6 +19,7 @@ require "slim"
 page 'home.html', :layout => false
 page 'dribbble-thumb.html', :layout => false
 page 'blog-post.html', :layout => false
+page 'project-thumb.html', :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
