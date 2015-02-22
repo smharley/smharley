@@ -5,4 +5,4 @@ li.section-thumb ng-repeat="shot in shots | limitTo: 6 | orderBy: '-created_at'"
       h3.section-thumb-heading
         | {{ shot.title }}
       h4.section-thumb-date
-        | {{ shot.created_at }}
+        | {{ shot.created_at | date:'MMMM d, yyyy' }}

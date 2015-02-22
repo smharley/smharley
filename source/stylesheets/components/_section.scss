@@ -54,6 +54,11 @@
     display: block;
     float: left;
     margin: 0 2em 4em 0;
+    max-width: em(640);
+
+    &-date {
+      @extend %small-caps;
+    }
 
     &-heading {
       font-size: em(21);
