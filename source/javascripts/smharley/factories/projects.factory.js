@@ -31,6 +31,7 @@
               'angularJS',
               'ruby on rails'
           ],
+          thumbnail: 'jenny/jenny-thumb.png',
           title: 'Jen Harley\'s Portfolio',
         },
        {
@@ -39,6 +40,7 @@
               'html/css',
               'visual design',
           ],
+          thumbnail: 'day-of-the-shirt/day-of-the-shirt-thumb.png',
           title: 'Day of the Shirt',
         },
        {
@@ -48,6 +50,7 @@
               'branding',
               'html/css',
           ],
+          thumbnail: 'supplybetter/supplybetter-thumb.png',
           title: 'SupplyBetter',
        },
        {
@@ -57,6 +60,7 @@
               'visual design',
               'mobile'
           ],
+          thumbnail: 'gopro/gopro-thumb.png',
           title: 'GoPro',
         },
         {
@@ -66,6 +70,7 @@
               'web design',
               'html/css'
           ],
+          thumbnail: 'hackreactor/hackreactor-thumb.png',
           title: 'Hack Reactor',
         },
         {
@@ -74,6 +79,7 @@
               'product design',
               'mobile',
           ],
+          thumbnail: 'ravel/ravel-thumb.png',
           title: 'Ravel',
         }];
       deferred.resolve(projects);

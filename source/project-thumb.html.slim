@@ -1,6 +1,6 @@
 li.section-thumb ng-repeat="project in projects | limitTo: 6"
   a href="{{ project.link }}"
-    img.section-thumb-image src="http://placekitten.com/g/800/800"
+    img.section-thumb-image src="/img/projects/{{ project.thumbnail }}"
     .section-thumb-meta
       img.section-thumb-icon src="http://placekitten.com/g/48/48"
       h3.section-thumb-heading
