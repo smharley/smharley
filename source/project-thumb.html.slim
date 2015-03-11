@@ -1,6 +1,6 @@
 li.section-thumb.section-thumb--project ng-repeat="project in projects | limitTo: 6"
   a.section-thumb-link href="{{ project.link }}"
-    img.section-thumb-image src="/img/projects/{{ project.thumbnail }}"
+    img.section-thumb-image ng-src="/img/projects/{{ project.thumbnail }}"
     .section-thumb-meta
       h3.section-thumb-heading
         | {{ project.title }}
