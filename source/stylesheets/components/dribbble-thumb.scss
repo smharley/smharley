@@ -1,0 +1,21 @@
+.section-thumb--dribbble {
+  @include media($large-screen) {
+    @include span-columns(3);
+    position: relative;
+    text-align: center;
+
+    .section-thumb-meta {
+      @include position(absolute, 0 0 0 0);
+      background-color: rgba(#fff, 0.88);
+      opacity: 0;
+      padding: em(32) 0 0;
+      transition: opacity 0.33s ease;
+    }
+
+    a:hover {
+      .section-thumb-meta {
+        opacity: 1;
+      }
+    }
+  }
+}

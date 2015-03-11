@@ -51,7 +51,6 @@
   }
 
   &-thumb {
-    border: $base-border;
     display: block;
     float: left;
     margin: 0 2em 4em 0;
@@ -73,6 +72,7 @@
     }
 
     &-image {
+      border: $base-border;
       display: block;
     }
 
@@ -147,8 +147,17 @@
         margin-right: 0;
       }
 
+      &-image {
+        border: 0;
+        transition: all 0.4s $base-transition;
+      }
+
+      &-link {
+        border: $base-border;
+      }
+
       &-meta {
-        display: none;
+        margin: 0;
       }
     }
   }

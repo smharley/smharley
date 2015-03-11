@@ -1,10 +1,11 @@
-li.section-thumb ng-repeat="project in projects | limitTo: 6"
-  a href="{{ project.link }}"
+li.section-thumb.section-thumb--project ng-repeat="project in projects | limitTo: 6"
+  a.section-thumb-link href="{{ project.link }}"
     img.section-thumb-image src="/img/projects/{{ project.thumbnail }}"
     .section-thumb-meta
-      img.section-thumb-icon src="http://placekitten.com/g/48/48"
       h3.section-thumb-heading
         | {{ project.title }}
       h4.section-thumb-tags
         span ng-repeat="tag in project.tags"
           | {{ tag }}{{$last ? '' : ', '}}
+      p.section-description.section-thumb-case-study
+        | Case study coming soon

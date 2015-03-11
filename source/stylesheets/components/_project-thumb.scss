@@ -1,0 +1,46 @@
+.section-thumb--project {
+  .section-thumb-link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .section-thumb-meta {
+    display: block;
+  }
+
+  @include media($large-screen) {
+    &:hover {
+      .section-thumb-meta {
+        opacity: 1;
+        transform: translateY(50%);
+        transition: transform 0.4s $base-transition, opacity 0.1s $base-transition;
+      }
+
+      .section-thumb-image {
+        transform: scale(0.8) translateY(-33%);
+      }
+    }
+
+    .section-thumb-meta {
+      backface-visibility: hidden;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      padding: 20px;
+      position: absolute;
+      text-align: center;
+      transform: translateY(100%);
+      transform-origin: 0 0;
+      transition: transform 0.4s $base-transition, opacity 0.1s 0.3s $base-transition;
+      width: 100%;
+    }
+  }
+}
+
+.section-thumb-case-study {
+  font-size: em(12);
+  margin-top: em(12, 12);
+  opacity: 0.5;
+}

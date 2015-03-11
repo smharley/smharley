@@ -25,9 +25,7 @@
     function fetchProjects(deferred) {
       projects = [
         {
-          link: 'https://robots.thoughtbot.com/using-expressions-in-after-effects',
           tags: [
-              'art direction',
               'angularJS',
               'ruby on rails'
           ],
@@ -35,7 +33,6 @@
           title: 'Jen Harley\'s Portfolio',
         },
        {
-          link: 'https://robots.thoughtbot.com/svg-animations',
           tags: [
               'html/css',
               'visual design',
@@ -44,7 +41,6 @@
           title: 'Day of the Shirt',
         },
        {
-          link: 'https://robots.thoughtbot.com/building-ralph-in-svg',
           tags: [
               'web design',
               'branding',
@@ -54,7 +50,6 @@
           title: 'SupplyBetter',
        },
        {
-          link: 'https://robots.thoughtbot.com/svg-animations',
           tags: [
               'web design',
               'visual design',
@@ -64,7 +59,6 @@
           title: 'GoPro',
         },
         {
-          link: 'https://robots.thoughtbot.com/svg-animations',
           tags: [
               'branding',
               'web design',
@@ -74,7 +68,6 @@
           title: 'Hack Reactor',
         },
         {
-          link: 'https://robots.thoughtbot.com/svg-animations',
           tags: [
               'product design',
               'mobile',

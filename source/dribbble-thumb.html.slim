@@ -1,6 +1,6 @@
-li.section-thumb ng-repeat="shot in shots | limitTo: 6 | orderBy: '-created_at'"
+li.section-thumb.section-thumb--dribbble ng-repeat="shot in shots | limitTo: 4 | orderBy: '-created_at'"
   a ng-href="{{ shot.html_url }}"
-    img.section-thumb-image ng-src="{{ shot.images.hidpi }}"
+    img.section-thumb-image ng-src="{{ shot.images.teaser }}"
     .section-thumb-meta
       h3.section-thumb-heading
         | {{ shot.title }}
