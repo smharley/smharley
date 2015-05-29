@@ -1,0 +1,8 @@
+li.section-thumb.section-thumb--dribbble ng-repeat="trip in trips"
+  a ng-href="/trips/{{ trip.link }}"
+    img.section-thumb-image ng-src="{{ trip.thumbnail }}"
+    .section-thumb-meta
+      h3.section-thumb-heading
+        | {{ trip.title }}
+      h4.section-thumb-date
+        | {{ trip.date | date:'MMMM d, yyyy' }}

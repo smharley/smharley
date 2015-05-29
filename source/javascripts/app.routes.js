@@ -10,6 +10,9 @@
       .when('/', {
         templateUrl: '/home.html',
       })
+      .when('/trips/:param', {
+        templateUrl: '/trip-info.html',
+      })
       .otherwise({
         templateUrl: '/pages/404',
         resolve: function() {

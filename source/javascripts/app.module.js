@@ -1,5 +1,5 @@
 (function() {
   "use strict";
 
-  angular.module('smharley', ['ngRoute']);
+  angular.module('smharley', ['angular-markdown', 'ngRoute']);
 })();
