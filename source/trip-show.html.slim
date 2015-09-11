@@ -1,0 +1,16 @@
+.section
+  .section-content
+    .trip trip-show=""
+      .trip-navigation
+        a href="/"
+          | < Go home
+
+        a href="/trips/{{ trip.slug }}" ng-repeat="trip in trips | filter:{'id': nextTrip}"
+          | Next trip:  {{ trip.title }}
+
+      h1.trip-heading
+        | {{ trip.title }}
+      h2.trip-subheading
+        | {{ trip_date_formatted }}
+
+      .trip-body btf-markdown="" ng-include="'trips/source/' + trip.slug"

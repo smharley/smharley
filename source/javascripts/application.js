@@ -3,5 +3,6 @@
 //= require angular-sanitize
 //= require showdown
 //= require angular-markdown
+//= require moment
 
 //= require_tree .

@@ -1,0 +1,33 @@
+.trip {
+  @include media($large-screen) {
+    @include span-columns(9);
+    @include shift(1.5);
+  }
+
+  &-body {
+    padding: 3em 0;
+    p {
+      font-family: 'adelle-sans', $sans-serif;
+      font-size: 1.4em;
+      line-height: 1.75em;
+    }
+  }
+
+  %trip-headings {
+    text-align: center;
+  }
+
+  &-heading {
+    @extend %trip-headings;
+    font-size: 6em;
+  }
+
+  &-subheading {
+    @extend %trip-headings;
+    color: $medium-gray;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 2em 0 0;
+    text-transform: uppercase;
+  }
+}

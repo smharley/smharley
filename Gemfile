@@ -13,4 +13,5 @@ source "https://rails-assets.org" do
   gem "rails-assets-angular-route"
   gem "rails-assets-angular-markdown"
   gem "rails-assets-angular-sanitize"
+  gem "rails-assets-moment"
 end

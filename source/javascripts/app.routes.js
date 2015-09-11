@@ -11,7 +11,7 @@
         templateUrl: '/home.html',
       })
       .when('/trips/:param', {
-        templateUrl: '/trip-info.html',
+        templateUrl: '/trip-show.html',
       })
       .otherwise({
         templateUrl: '/pages/404',
