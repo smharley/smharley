@@ -16,13 +16,13 @@ require 'slim'
 # Per-page layout changes:
 #
 # With no layout
-page 'home.html', :layout => false
-page 'dribbble-thumb.html', :layout => false
-page 'blog-post.html', :layout => false
-page 'project-thumb.html', :layout => false
-page 'trip-thumb.html', :layout => false
-page 'trip-info.html', :layout => false
-page 'trips/source/*', :layout => false
+# page 'home.html', :layout => false
+# page 'dribbble-thumb.html', :layout => false
+# page 'blog-post.html', :layout => false
+# page 'project-thumb.html', :layout => false
+# page 'trip-thumb.html', :layout => false
+# page 'trip-info.html', :layout => false
+# page 'trips/source/*', :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout

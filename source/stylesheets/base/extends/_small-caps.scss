@@ -1,0 +1,8 @@
+%small-caps {
+  color: lighten($medium-gray, 20);
+  font-size: $small-font-size;
+  font-weight: $base-font-weight;
+  letter-spacing: 0.0625rem;
+  margin-top: $extra-small-spacing;
+  text-transform: uppercase;
+}

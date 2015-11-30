@@ -9,7 +9,7 @@
     display: block;
   }
 
-  @include media($large-screen) {
+  @include min-screen($large-screen) {
     &:hover {
       .section-thumb-meta {
         opacity: 1;
@@ -40,7 +40,7 @@
 }
 
 .section-thumb-case-study {
-  font-size: em(12);
-  margin-top: em(12, 12);
+  font-size: 0.75rem;
+  margin-top: 1em;
   opacity: 0.5;
 }

@@ -1,0 +1,12 @@
+@mixin span-columns($span-columns, $span-gutter) {
+  float: left;
+  margin-right: $flex-gutter;
+  width: percentage(
+          (($base-column-width * $span-columns) + ($base-gutter * $span-gutter))
+          / $layout-width
+         );
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

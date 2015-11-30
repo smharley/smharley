@@ -1,14 +1,18 @@
-.section-thumb--dribbble {
-  @include media($large-screen) {
-    @include span-columns(3);
+@include min-screen($large-screen) {
+  .section-thumb--dribbble {
+    @include span-columns(3, 2);
     position: relative;
     text-align: center;
 
     .section-thumb-meta {
-      @include position(absolute, 0 0 0 0);
       background-color: rgba(#fff, 0.88);
+      bottom: 0;
+      left: 0;
       opacity: 0;
-      padding: em(32) 0 0;
+      padding: $large-spacing 0 0;
+      position: absolute;
+      right: 0;
+      top: 0;
       transition: opacity 0.33s ease;
     }
 

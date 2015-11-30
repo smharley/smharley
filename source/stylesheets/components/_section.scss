@@ -1,164 +1,148 @@
-%small-caps {
-  color: lighten($medium-gray, 20);
-  font-size: em(14);
-  font-weight: 400;
-  letter-spacing: em(1);
-  margin-top: em(6);
-  text-transform: uppercase;
-}
-
 .section {
-  padding: 2em 0 0;
+  padding: $large-spacing 0 0;
 
   &:last-child {
     .section-content {
       border: 0;
     }
   }
+}
 
-  &-article {
-    margin-top: em(46);
-  }
+.section-article {
+  margin-top: $extra-large-spacing;
+}
 
-  &-content {
-    @include outer-container;
-    border-bottom: $base-border;
-    margin: em(20);
-    padding: em(32) 0 em(64);
-  }
+.section-content {
+  @include outer-container;
+  border-bottom: $base-border;
+  margin-bottom: $base-spacing;
+  margin-top: $base-spacing;
+  padding: $large-spacing 0 ($large-spacing * 2);
+}
 
-  &-description {
-    color: $medium-gray;
-    font: 400 em(16) $serif;
-  }
+.section-description {
+  color: $medium-gray;
+  font: $base-font-weight $base-font-size $serif;
+}
 
-  &-heading {
-    font-size: em(21);
-    line-height: em(25, 21);
-    margin-bottom: em(11, 21);
-    margin-top: em(24, 21);
-  }
+.section-heading {
+  font-size: 21px;
+  line-height: 1.2;
+  margin-bottom: $small-spacing;
+  margin-top: $base-spacing;
+}
 
-  &-list {
-    &-date {
-      @extend %small-caps;
-    }
-  }
+.section-list-date {
+  @extend %small-caps;
+}
 
-  &-paragraph {
-    font-family: $serif;
-    font-size: em(18);
-  }
 
-  &-thumb {
+.section-paragraph {
+  font-family: $serif;
+  font-size: $h5-font-size;
+}
+
+.section-thumb {
+  display: block;
+  float: left;
+  margin: 0 $large-spacing ($large-spacing * 2) 0;
+  max-width: $medium-screen;
+}
+
+.section-thumb-date {
+  @extend %small-caps;
+}
+
+.section-thumb-heading {
+  font-size: 21px;
+  line-height: 1.1;
+}
+
+.section-thumb-icon {
+  display: block;
+  float: left;
+  margin-right: $base-spacing;
+}
+
+.section-thumb-image {
+  border: $base-border;
+  display: block;
+}
+
+.section-thumb-meta {
+  margin: $base-spacing 0;
+}
+
+.section-thumb-tags {
+  @extend %small-caps;
+}
+
+
+.section-title {
+  color: $medium-gray;
+  font: $base-font-weight $base-font-size $serif;
+
+  &::after {
+    border-bottom: 1px solid $light-gray;
+    content: "";
     display: block;
-    float: left;
-    margin: 0 2em 4em 0;
-    max-width: em(640);
-
-    &-date {
-      @extend %small-caps;
-    }
-
-    &-heading {
-      font-size: em(21);
-      line-height: 1.1;
-    }
-
-    &-icon {
-      display: block;
-      float: left;
-      margin-right: 1em;
-    }
-
-    &-image {
-      border: $base-border;
-      display: block;
-    }
-
-    &-meta {
-      margin: 1.5em 0;
-    }
-
-    &-tags {
-      @extend %small-caps;
-    }
-  }
-
-  &-title {
-    color: $medium-gray;
-    font: 400 em(16) $serif;
-
-    &::after {
-      border-bottom: 1px solid $light-gray;
-      content: '';
-      display: block;
-      margin-top: em(15);
-      width: em(28);
-    }
+    margin-top: $small-spacing * 1.5;
+    width: 1.75rem;
   }
 }
 
-@include media($large-screen) {
+
+@include min-screen($large-screen) {
   .section {
     padding: {
-      left: em(20);
-      right: em(20);
+      left: $base-spacing;
+      right: $base-spacing;
     }
+  }
 
-    &-aside {
-      @include span-columns(3);
+  .section-aside {
+    @include span-columns(3, 2);
+  }
+
+  .section-article {
+    @include span-columns(9, 8);
+    margin-top: 71px;
+  }
+
+  .section-heading {
+    .section-list & {
+      margin-top: -4px;
     }
+  }
 
-    &-article {
-      @include span-columns(9);
-      margin-top: em(71);
+  .section-list-item {
+    @include span-columns(4, 3);
+  }
+
+  .section-paragraph {
+    font-size: $h5-font-size;
+    max-width: 90%;
+  }
+
+  .section-thumb {
+    @include span-columns(4, 3);
+    margin-bottom: $small-spacing * 1.5;
+
+    &:nth-child(3) {
+      margin-right: 0;
     }
+  }
 
-    &-content {
-      margin: {
-        left: auto;
-        right: auto;
-      }
-    }
+  .section-thumb-image {
+    border: 0;
+    transition: all 0.4s $base-transition;
+  }
 
-    &-heading {
-      .section-list & {
-        margin-top: em(-4, 21);
-      }
-    }
+   .section-thumb-link {
+    border: $base-border;
+  }
 
-    &-list {
-      &-item {
-        @include span-columns(4);
-      }
-    }
-
-    &-paragraph {
-      font-size: em(20);
-      max-width: 90%;
-    }
-
-    &-thumb {
-      @include span-columns(4);
-      margin-bottom: 1em;
-
-      &:nth-child(3) {
-        margin-right: 0;
-      }
-
-      &-image {
-        border: 0;
-        transition: all 0.4s $base-transition;
-      }
-
-      &-link {
-        border: $base-border;
-      }
-
-      &-meta {
-        margin: 0;
-      }
-    }
+  .section-thumb-meta {
+    margin: 0;
   }
 }
